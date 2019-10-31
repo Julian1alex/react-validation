@@ -65,7 +65,7 @@ function Form(props) {
         }
         if (cpass === "") {
             err = true 
-            setCpassError("Cannot be blank")
+            setCpassError("Password must match")
         } else {
             setCpassError("")
         }
@@ -112,7 +112,7 @@ function Form(props) {
             <form onSubmit={handleSubmit} className="innerform">
                 <h1>Profile Form - All fields required</h1>
                 <div>
-                    <label className="error">{fnameError}Name Cannot be blank</label>
+                    <label className="error">{fnameError}Name</label>
                         <input 
                             onChange={e => setFname(e.target.value)} 
                             value={fname} 
@@ -122,7 +122,7 @@ function Form(props) {
                         </input>
                 </div>
                 <div>
-                    <label className="error">{emailError} Email Please enter a valid email</label>
+                    <label className="error">{emailError}Email</label>
                         <input 
                             onChange={e => setEmail(e.target.value)} 
                             value={email} 
@@ -132,7 +132,7 @@ function Form(props) {
                         </input>
                 </div>
                 <div>
-                    <label className="error">{unameError} Username Cannot be blank</label>
+                    <label className="error">{unameError}Username</label>
                         <input 
                             onChange={e => setUname(e.target.value)} 
                             value={uname} 
@@ -142,7 +142,7 @@ function Form(props) {
                         </input>
                 </div>
                 <div>
-                   <label className="error">{passError} Password Cannot be blank</label>
+                   <label className="error">{passError}Password</label>
                         <input 
                             onChange={e => setPass(e.target.value)}
                             value={pass} 
@@ -152,7 +152,7 @@ function Form(props) {
                         </input>
                 </div>
                 <div>
-                    <label className="error">{cpassError} Confirm Password Cannot be blank</label>
+                    <label className="error">{cpassError}Confirm Password</label>
                         <input 
                             onChange={e => setCpass(e.target.value)} 
                             value={cpass} 
@@ -162,14 +162,14 @@ function Form(props) {
                         </input>
                 </div>
                 <div>
-                    <label className="error">{urlError} Website Please enter a valid url</label>
+                    <label className="error">{urlError}Website</label>
                         <input 
                             onChange={e => setUrl(e.target.value)} 
                             value={url} type="text" 
                             placeholder="Ex. Website - Please enter a valid url" 
                             className={urlError === '' ? '' : 'error'}>
                         </input>
-                    <button  className="submit">Submit</button>
+                    <div><button  className="submit">Submit</button></div>
                 </div>
             </form>
         </div>
